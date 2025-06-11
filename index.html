@@ -22,14 +22,17 @@
         color: #222;
       }
       .video-block {
-        margin: 32px auto;
+        margin: 32px 0 32px 0;
         max-width: 400px;
-        text-align: center;
+        text-align: left;
+        /* Align left edge */
       }
       .video-block img {
         width: 100%;
         border-radius: 8px;
         margin-bottom: 8px;
+        display: block;
+        margin-left: 0;
       }
       .video-block a {
         display: block;
@@ -41,10 +44,18 @@
         border-radius: 6px;
         text-decoration: none;
         transition: background 0.2s, color 0.2s;
+        margin-left: 0;
+        text-align: left;
       }
       .video-block a:hover {
         background: #222;
         color: #ffcc00;
+      }
+      /* Make the video section align left */
+      .videos-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
     </style>
   </head>
@@ -59,28 +70,26 @@
       <section>
         <h2>There Isn't Much Here Yet, But As I Learn, You Can Use This Site To See My Progress!</h2>
         <h3>Here Are Some Of My Videos And Streams!</h3>
-
-        <div class="video-block">
-          <img src="https://i.ytimg.com/an_webp/_Re5u88QPMY/mqdefault_6s.webp?du=3000&sqp=COS9pMIG&rs=AOn4CLCTViLB6Mtwlzw6siJJhY39GB_c9g" alt="Halo Infinite Campaign – Max settings 60fps! 💀">
-          <a href="https://youtu.be/_Re5u88QPMY?si=77CaK4XHcxCEVnaP" target="_blank">
-            Halo Infinite Campaign – Max settings 60fps! 💀
-          </a>
+        <div class="videos-left">
+          <div class="video-block">
+            <img src="https://i.ytimg.com/an_webp/_Re5u88QPMY/mqdefault_6s.webp?du=3000&sqp=COS9pMIG&rs=AOn4CLCTViLB6Mtwlzw6siJJhY39GB_c9g" alt="Halo Infinite Campaign – Max settings 60fps! 💀">
+            <a href="https://youtu.be/_Re5u88QPMY?si=77CaK4XHcxCEVnaP" target="_blank">
+              Halo Infinite Campaign – Max settings 60fps! 💀
+            </a>
+          </div>
+          <div class="video-block">
+            <img src="https://i.ytimg.com/an_webp/ufw0kjG45sk/mqdefault_6s.webp?du=3000&sqp=CNKspMIG&rs=AOn4CLC0p1HzkpNYyc0NHWrjR4BIehAhUQ" alt="Fallout 4 Like Never Before – Realistic Weapons, Zombies & Brotherhood!">
+            <a href="https://youtu.be/ufw0kjG45sk?si=5ltTp3KfZFeq8_KL" target="_blank">
+              Fallout 4 Like Never Before – Realistic Weapons, Zombies & Brotherhood!
+            </a>
+          </div>
+          <div class="video-block">
+            <img src="https://i.ytimg.com/an_webp/cb_RC_uBsXc/mqdefault_6s.webp?du=3000&sqp=CKfOpMIG&rs=AOn4CLCUY5x-QXLeAq3LRzNBRwmoLcCozw" alt="CLIMBING TO PREDATOR! Apex Legends Ranked Grinding">
+            <a href="https://www.youtube.com/live/cb_RC_uBsXc?si=HWrXOBHPuztDMuiK" target="_blank">
+              CLIMBING TO PREDATOR! Apex Legends Ranked Grinding
+            </a>
+          </div>
         </div>
-
-        <div class="video-block">
-          <img src="https://i.ytimg.com/an_webp/ufw0kjG45sk/mqdefault_6s.webp?du=3000&sqp=CNKspMIG&rs=AOn4CLC0p1HzkpNYyc0NHWrjR4BIehAhUQ" alt="Fallout 4 Like Never Before – Realistic Weapons, Zombies & Brotherhood!">
-          <a href="https://youtu.be/ufw0kjG45sk?si=5ltTp3KfZFeq8_KL" target="_blank">
-            Fallout 4 Like Never Before – Realistic Weapons, Zombies & Brotherhood!
-          </a>
-        </div>
-
-        <div class="video-block">
-          <img src="https://i.ytimg.com/an_webp/cb_RC_uBsXc/mqdefault_6s.webp?du=3000&sqp=CKfOpMIG&rs=AOn4CLCUY5x-QXLeAq3LRzNBRwmoLcCozw" alt="CLIMBING TO PREDATOR! Apex Legends Ranked Grinding">
-          <a href="https://www.youtube.com/live/cb_RC_uBsXc?si=HWrXOBHPuztDMuiK" target="_blank">
-            CLIMBING TO PREDATOR! Apex Legends Ranked Grinding
-          </a>
-        </div>
-
       </section>
     </main>
   </body>
