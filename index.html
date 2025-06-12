@@ -68,6 +68,99 @@
       h1, h2, h3 {
         color: #ffcc00;
       }
+      /* === Pack Shack Section Styles === */
+.pack-shack-section {
+  padding: 60px 20px 80px;
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+}
+
+.pack-shack-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #FFD700;
+}
+
+.white-panel {
+  width: 100vw;
+  background: white;
+  padding: 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.pack-racks {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.pack-rack {
+  display: flex;
+  gap: 20px;
+  background-color: #bfbfbf;
+  border-radius: 8px;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+.pack-card {
+  flex: 1 1 50%;
+  max-width: 460px;
+  background-color: #1c1c1c;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.pack-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pack-card p {
+  padding: 15px;
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.pack-card:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .white-panel {
+    padding: 30px 10px;
+  }
+  .pack-racks {
+    max-width: 100%;
+    gap: 20px;
+  }
+  .pack-rack {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .pack-card {
+    flex: unset;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
     </style>
   </head>
   <body>
@@ -183,7 +276,39 @@
     </div>
   </div>
 </section>
-
+<section class="pack-shack-section">
+  <h2>This Week At The Pack Shack</h2>
+  <div class="white-panel">
+    <div class="pack-racks">
+      <div class="pack-rack">
+        <div class="pack-card">
+          <img src="https://via.placeholder.com/300x200" alt="Event 1" />
+          <p>Event 1 Description</p>
+        </div>
+        <div class="pack-card">
+          <img src="https://via.placeholder.com/300x200" alt="Event 2" />
+          <p>Event 2 Description</p>
+        </div>
+      </div>
+      <div class="pack-rack">
+        <div class="pack-card">
+          <img src="https://via.placeholder.com/300x200" alt="Event 3" />
+          <p>Event 3 Description</p>
+        </div>
+        <div class="pack-card">
+          <img src="https://via.placeholder.com/300x200" alt="Event 4" />
+          <p>Event 4 Description</p>
+        </div>
+      </div>
+      <div class="pack-rack">
+        <div class="pack-card">
+          <img src="https://via.placeholder.com/300x200" alt="Event 5" />
+          <p>Event 5 Description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 </body>
 </html>
