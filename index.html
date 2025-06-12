@@ -166,7 +166,47 @@
     width: 90%; /* Make cards take up 90% width on smaller screens */
   }
 }
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000; /* Optional: Set a consistent background for the whole page */
+  color: #fff; /* Optional: Set a default text color for the whole page */
+}
 
+/* --- */
+
+/* NEW: STYLES FOR THE SEPARATE WELCOME TITLE SECTION */
+.welcome-title-section {
+  padding: 80px 20px 40px; /* Adjust padding as needed for spacing */
+  text-align: center;
+  background-color: #333; /* A slightly different background for distinction */
+  color: #FFD700; /* Gold color for the title */
+
+  /* Center the title section itself, similar to pack-shack-section */
+  max-width: 1400px; /* Match the max-width of your content sections for alignment */
+  margin: 0 auto;
+}
+
+.welcome-title-section h1 {
+  font-size: 4.5rem; /* Make the text very large */
+  font-weight: 900; /* Make it very bold (or 'bold' or a numerical value like 700) */
+  margin: 0; /* Remove default margin from h1 */
+  text-transform: uppercase; /* Optional: Make it all uppercase */
+  letter-spacing: 2px; /* Optional: Add some letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow */
+}
+
+/* ... (the rest of your existing CSS rules like .pack-shack-section, .white-panel, etc. go here) ... */
+
+/* And remember the media query for the title: */
+@media (max-width: 1280px) {
+  /* ... other media query rules ... */
+  .welcome-title-section h1 {
+      font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+}
     </style>
   </head>
   <body>
@@ -248,7 +288,13 @@
     CLIMBING TO PREDATOR! Apex Legends Ranked Grinding
   </a>
 </div>
-
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Shack</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <main>
         <div class="welcome-title-section">
             <h1>Welcome To The Pack Shack</h1>
         </div>
