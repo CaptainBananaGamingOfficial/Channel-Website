@@ -87,19 +87,18 @@
   background: white;
   padding: 100px 0;
   display: flex;
-  justify-content: flex-start; /* Push content to left inside container */
+  justify-content: center; /* centers the content inside */
 }
 
 .pack-racks {
   width: 100%;
-  max-width: 960px;
-  margin-left: auto; /* Push container to the right */
+  max-width: 1280px; /* limits width of content */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* centers each rack inside */
   gap: 60px;
-  box-sizing: border-box;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .pack-rack {
@@ -111,7 +110,6 @@
   border-radius: 12px;
   width: 100%;
   max-width: 1080px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
 
@@ -121,7 +119,6 @@
   border-radius: 12px;
   overflow: hidden;
   width: 420px;
-  max-width: 100%;
   text-align: left;
   transition: transform 0.3s ease;
 }
@@ -142,6 +139,7 @@
 .pack-card:hover {
   transform: scale(1.03);
 }
+
 
 @media (max-width: 1280px) {
   .pack-rack {
