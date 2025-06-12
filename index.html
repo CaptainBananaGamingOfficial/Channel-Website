@@ -69,128 +69,173 @@
         color: #ffcc00;
       }
       /* === Pack Shack Section Styles === */
-.pack-shack-section {
-  padding: 60px 20px 80px; /* Internal spacing for the section */
-  background-color: #1e1e1e;
-  color: #ecc900;
-  text-align: center; /* Centers the H1/H2 text inside this section */
-
-  /* CRUCIAL FOR CENTERING THE SECTION ON THE WEBPAGE */
-  max-width: 1400px; /* Sets a maximum width for the entire dark section. Adjust as needed. */
-  margin: 0 auto;    /* This is the magic for horizontal centering on the page. */
-                     /* '0' for top/bottom margin, 'auto' for left/right. */
-}
-
-/* --- */
-
-/* WHITE PANEL STYLES */
-.white-panel {
-  width: 100%; /* Will take 100% of the .pack-shack-section's constrained width */
-  background: rgb(0, 0, 0);
-  padding: 100px 0;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center; /* Centers the content (.pack-racks) inside the white panel */
-}
-
-/* --- */
-
-/* PACK RACKS CONTAINER STYLES (Holds all the card rows) */
-.pack-racks {
-  width: 100%;
-  max-width: 1280px; /* Limits the maximum width of the card layout area itself */
-  display: flex;
-  flex-direction: column; /* Stacks the individual .pack-rack rows vertically */
-  align-items: center; /* Centers each .pack-rack horizontally within .pack-racks */
-  gap: 60px; /* Space between each .pack-rack row */
-  padding: 0 20px;
-  border-radius: 12px; /* Internal padding for content within pack-racks */
-  box-sizing: border-box; /* Includes padding in the element's total width */
-}
-
-/* --- */
-
-/* INDIVIDUAL PACK RACK (Row of cards) */
-.pack-rack {
-  display: flex;
-  justify-content: center; /* Centers cards within this row */
-  gap: 40px; /* Space between individual cards */
-  background-color: #2e2e2e;
-  padding: 30px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 1080px; /* Limits the width of an individual pack-rack row */
-  flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
-}
-
-/* --- */
-
-/* INDIVIDUAL PACK CARD STYLES */
-.pack-card {
-  background-color: #1c1c1c;
-  border: 2px solid #FFD700;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 420px; /* Fixed width for the card (will adjust on smaller screens via media query) */
-  text-align: left;
-  transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.pack-card img {
-  width: 100%;
-  height: auto;
-  display: block; /* Removes extra space below images */
-}
-
-.pack-card p {
-  padding: 20px;
-  font-size: 1.1rem;
-  color: #ccc;
-  margin: 0;
-}
-
-.pack-card:hover {
-  transform: scale(1.03); /* Slight zoom on hover */
-}
-
-/* --- */
-
-/* RESPONSIVE DESIGN (adjustments for smaller screens) */
-@media (max-width: 1280px) {
-  .pack-rack {
-    flex-direction: column; /* Stack cards vertically in a column on smaller screens */
-    align-items: center; /* Centers the stacked cards */
-  }
-
-  .pack-card {
-    width: 90%; /* Make cards take up 90% width on smaller screens */
-  }
-}
 {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #000; /* Optional: Set a consistent background for the whole page */
-  color: #fff; /* Optional: Set a default text color for the whole page */
+    height: 100%; /* Make html element take full viewport height */
+    /* This ensures padding and border are included in the element's total width/height,
+       making layout calculations more predictable across all elements. */
+    box-sizing: border-box;
+}
+
+/* This universal selector applies 'box-sizing: inherit' to all elements,
+   meaning they will inherit the box-sizing property from their parent (html in this case). */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0; /* Remove any default browser margin on the body */
+    padding: 0; /* Remove any default browser padding on the body */
+    width: 100%; /* Ensure the body takes up the full width of the viewport */
+    min-height: 100vh; /* Make sure the body is at least the height of the viewport */
+    
+    /* Using flexbox on the body can help center its direct children,
+       like your <main> tag or sections, if they are not specifically
+       constrained in width otherwise. */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* This will horizontally center direct children */
+    overflow-x: hidden; /* Prevents unwanted horizontal scrollbars if content slightly overflows */
+}
+
+/* If you are using a <main> tag to wrap your sections (which your HTML indicates),
+   these styles ensure it behaves correctly within the new body flex context. */
+main {
+    width: 100%; /* Allow main to take the full width provided by body */
+    /* If you also want to constrain and center the <main> element itself
+       when the screen is very wide, you can add: */
+    max-width: 1400px; /* Example max-width for the overall main content area */
+    margin: 0 auto; /* Center the main element horizontally within the body */
 }
 
 /* --- */
 
 /* NEW: STYLES FOR THE SEPARATE WELCOME TITLE SECTION */
 .welcome-title-section {
-  padding: 80px 20px 40px; /* Adjust padding as needed for spacing */
-  text-align: center;
-  background-color: #333; /* A slightly different background for distinction */
-  color: #FFD700; /* Gold color for the title */
+    padding: 80px 20px 40px; /* Internal spacing for the title section */
+    text-align: center; /* Centers the H1 text inside this section */
+    background-color: #333; /* Distinct background color */
+    color: #FFD700; /* Gold color for the title */
 
-  /* Center the title section itself, similar to pack-shack-section */
-  max-width: 1400px; /* Match the max-width of your content sections for alignment */
-  margin: 0 auto;
+    /* CRUCIAL FOR CENTERING THIS SECTION ON THE WEBPAGE */
+    max-width: 1400px; /* Sets a maximum width for this title section. Adjust as needed. */
+    margin: 0 auto;    /* This is the key to horizontally centering the section on the page. */
 }
 
 .welcome-title-section h1 {
-  font-size: 4.5rem; /* Make the text very large */
+    font-size: 4.5rem; /* Make the text very large */
+    font-weight: 900; /* Make it very bold */
+    margin: 0; /* Remove default margin from h1 to control spacing with parent's padding */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    letter-spacing: 2px; /* Optional: Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow */
+}
+
+/* --- */
+
+/* MAIN CONTENT SECTION STYLES (applies to the sections containing your cards) */
+.pack-shack-section {
+    padding: 60px 20px 80px; /* Internal spacing for the section */
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center; /* Centers the H2 text and other inline content inside this section */
+
+    /* CRUCIAL FOR CENTERING THESE SECTIONS ON THE WEBPAGE */
+    max-width: 1400px; /* Sets a maximum width for these content sections. Adjust as needed. */
+    margin: 0 auto;    /* This horizontally centers the sections on the page. */
+}
+
+.pack-shack-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #FFD700;
+}
+
+/* --- */
+
+/* WHITE PANEL STYLES */
+.white-panel {
+    width: 100%; /* Will take 100% of the .pack-shack-section's constrained width */
+    background: white;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center; /* Centers the content (.pack-racks) inside the white panel */
+    border-radius: 15px; /* Example: Rounded edges for the white panel */
+}
+
+/* --- */
+
+/* PACK RACKS CONTAINER STYLES (Holds all the card rows) */
+.pack-racks {
+    width: 100%;
+    max-width: 1280px; /* Limits the maximum width of the card layout area itself */
+    display: flex;
+    flex-direction: column; /* Stacks the individual .pack-rack rows vertically */
+    align-items: center; /* Centers each .pack-rack horizontally within .pack-racks */
+    gap: 60px; /* Space between each .pack-rack row */
+    padding: 0 20px; /* Internal padding for content within pack-racks */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+/* --- */
+
+/* INDIVIDUAL PACK RACK (Row of cards) */
+.pack-rack {
+    display: flex;
+    justify-content: center; /* Centers cards within this row */
+    gap: 40px; /* Space between individual cards */
+    background-color: #d9d9d9;
+    padding: 30px;
+    border-radius: 12px; /* Rounded edges for the grey background of card rows */
+    width: 100%;
+    max-width: 1080px; /* Limits the width of an individual pack-rack row */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+}
+
+/* --- */
+
+/* INDIVIDUAL PACK CARD STYLES */
+.pack-card {
+    background-color: #1c1c1c;
+    border: 2px solid #FFD700;
+    border-radius: 12px; /* Rounded edges for the individual cards */
+    overflow: hidden;
+    width: 420px; /* Fixed width for the card (will adjust on smaller screens via media query) */
+    text-align: left;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.pack-card img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below images */
+}
+
+.pack-card p {
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 0;
+}
+
+.pack-card:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+/* --- */
+
+/* RESPONSIVE DESIGN (adjustments for smaller screens) */
+@media (max-width: 1280px) {
+    .pack-rack {
+        flex-direction: column; /* Stack cards vertically in a column on smaller screens */
+        align-items: center; /* Centers the stacked cards */
+    }
+
+    .pack-card {
+        width: 90%; /* Make cards take up 90% width on smaller screens */
+    }
+
+    .welcome-title-section h1 {
+        font-size: 3rem;
   font-weight: 900; /* Make it very bold (or 'bold' or a numerical value like 700) */
   margin: 0; /* Remove default margin from h1 */
   text-transform: uppercase; /* Optional: Make it all uppercase */
