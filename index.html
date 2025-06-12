@@ -70,97 +70,98 @@
       }
       /* === Pack Shack Section Styles === */
 .pack-shack-section {
-  **P**ADDING: 60px 20px 80px; /* **I**NTERNAL **S**PACING */
-  **B**ACKGROUND-COLOR: #1e1e1e;
-  **C**OLOR: #fff;
-  **T**EXT-ALIGN: center; /* **C**ENTERS **T**EXT (**H**1/**H**2) **I**NSIDE **T**HIS **S**ECTION */
+  padding: 60px 20px 80px; /* Internal spacing for the section */
+  background-color: #1e1e1e;
+  color: #ecc900;
+  text-align: center; /* Centers the H1/H2 text inside this section */
 
-  /* **T**HIS **I**S **K**EY: **C**ENTERING **T**HE **E**NTIRE **S**ECTION **O**N **T**HE **W**EB **P**AGE */
-  **M**AX-WIDTH: 1400px; /* **S**ET **Y**OUR **D**ESIRED **M**AXIMUM **W**IDTH **H**ERE */
-  **M**ARGIN: 0 auto;    /* **T**HIS **H**ORIZONTALLY **C**ENTERS **T**HE **B**LOCK */
+  /* CRUCIAL FOR CENTERING THE SECTION ON THE WEBPAGE */
+  max-width: 1400px; /* Sets a maximum width for the entire dark section. Adjust as needed. */
+  margin: 0 auto;    /* This is the magic for horizontal centering on the page. */
+                     /* '0' for top/bottom margin, 'auto' for left/right. */
 }
 
 /* --- */
 
-/* **W**HITE **P**ANEL **S**TYLES: **T**HE **B**ACKGROUND **F**OR **Y**OUR **C**ARDS */
+/* WHITE PANEL STYLES */
 .white-panel {
-  **W**IDTH: 100%; /* **W**ILL **T**AKE **U**P **T**HE **W**IDTH **O**F **I**TS **P**ARENT (**P**ACK-**S**HACK-**S**ECTION) */
-  **B**ACKGROUND: white;
-  **P**ADDING: 100px 0;
-  **D**ISPLAY: flex;
-  **J**USTIFY-CONTENT: center; /* **C**ENTERS **C**ONTENT (**P**ACK-**R**ACKS) **I**NSIDE **T**HE **W**HITE **P**ANEL */
+  width: 100%; /* Will take 100% of the .pack-shack-section's constrained width */
+  background: rgb(0, 0, 0);
+  padding: 100px 0;
+  display: flex;
+  justify-content: center; /* Centers the content (.pack-racks) inside the white panel */
 }
 
 /* --- */
 
-/* **P**ACK **R**ACKS **C**ONTAINER **S**TYLES: **H**OLDS **A**LL **T**HE **C**ARD **R**OWS */
+/* PACK RACKS CONTAINER STYLES (Holds all the card rows) */
 .pack-racks {
-  **W**IDTH: 100%;
-  **M**AX-WIDTH: 1280px; /* **L**IMITS **T**HE **W**IDTH **O**F **T**HE **C**ARD **L**AYOUT **A**REA */
-  **D**ISPLAY: flex;
-  **F**LEX-DIRECTION: column; /* **S**TACKS **I**NDIVIDUAL **P**ACK-**R**ACK **R**OWS **V**ERTICALLY */
-  **A**LIGN-ITEMS: center; /* **C**ENTERS **E**ACH **P**ACK-**R**ACK **H**ORIZONTALLY **W**ITHIN **P**ACK-**R**ACKS */
-  **G**AP: 60px; /* **S**PACE **B**ETWEEN **E**ACH **P**ACK-**R**ACK **R**OW */
-  **P**ADDING: 0 20px; /* **I**NTERNAL **P**ADDING **F**OR **C**ONTENT */
-  **B**OX-SIZING: border-box; /* **I**NCLUDES **P**ADDING **I**N **T**HE **E**LEMENT'S **T**OTAL **W**IDTH */
+  width: 100%;
+  max-width: 1280px; /* Limits the maximum width of the card layout area itself */
+  display: flex;
+  flex-direction: column; /* Stacks the individual .pack-rack rows vertically */
+  align-items: center; /* Centers each .pack-rack horizontally within .pack-racks */
+  gap: 60px; /* Space between each .pack-rack row */
+  padding: 0 20px; /* Internal padding for content within pack-racks */
+  box-sizing: border-box; /* Includes padding in the element's total width */
 }
 
 /* --- */
 
-/* **I**NDIVIDUAL **P**ACK **R**ACK (**R**OW **O**F **C**ARDS) */
+/* INDIVIDUAL PACK RACK (Row of cards) */
 .pack-rack {
-  **D**ISPLAY: flex;
-  **J**USTIFY-CONTENT: center; /* **C**ENTERS **C**ARDS **W**ITHIN **T**HIS **R**OW */
-  **G**AP: 40px; /* **S**PACE **B**ETWEEN **I**NDIVIDUAL **C**ARDS */
-  **B**ACKGROUND-COLOR: #d9d9d9;
-  **P**ADDING: 30px;
-  **B**ORDER-RADIUS: 12px;
-  **W**IDTH: 100%;
-  **M**AX-WIDTH: 1080px; /* **L**IMITS **T**HE **W**IDTH **O**F **A**N **I**NDIVIDUAL **P**ACK-**R**ACK **R**OW */
-  **F**LEX-WRAP: wrap; /* **A**LLOWS **C**ARDS **T**O **W**RAP **O**N **S**MALLER **S**CREENS */
+  display: flex;
+  justify-content: center; /* Centers cards within this row */
+  gap: 40px; /* Space between individual cards */
+  background-color: #2e2e2e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1080px; /* Limits the width of an individual pack-rack row */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
 }
 
 /* --- */
 
-/* **I**NDIVIDUAL **P**ACK **C**ARD **S**TYLES */
+/* INDIVIDUAL PACK CARD STYLES */
 .pack-card {
-  **B**ACKGROUND-COLOR: #1c1c1c;
-  **B**ORDER: 2px solid #FFD700;
-  **B**ORDER-RADIUS: 12px;
-  **O**VERFLOW: hidden;
-  **W**IDTH: 420px; /* **F**IXED **W**IDTH (**A**DJUSTS **V**IA **M**EDIA **Q**UERY) */
-  **T**EXT-ALIGN: left;
-  **T**RANSITION: transform 0.3s ease; /* **S**MOOTH **H**OVER **E**FFECT */
+  background-color: #1c1c1c;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 420px; /* Fixed width for the card (will adjust on smaller screens via media query) */
+  text-align: left;
+  transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 .pack-card img {
-  **W**IDTH: 100%;
-  **H**EIGHT: auto;
-  **D**ISPLAY: block; /* **R**EMOVES **E**XTRA **S**PACE **B**ELOW **I**MAGES */
+  width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below images */
 }
 
 .pack-card p {
-  **P**ADDING: 20px;
-  **F**ONT-SIZE: 1.1rem;
-  **C**OLOR: #ccc;
-  **M**ARGIN: 0;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 0;
 }
 
 .pack-card:hover {
-  **T**RANSFORM: scale(1.03); /* **S**LIGHT **Z**OOM **O**N **H**OVER */
+  transform: scale(1.03); /* Slight zoom on hover */
 }
 
 /* --- */
 
-/* **R**ESPONSIVE **D**ESIGN: **A**DJUSTMENTS **F**OR **S**MALLER **S**CREENS */
+/* RESPONSIVE DESIGN (adjustments for smaller screens) */
 @media (max-width: 1280px) {
   .pack-rack {
-    **F**LEX-DIRECTION: column; /* **S**TACK **C**ARDS **V**ERTICALLY */
-    **A**LIGN-ITEMS: center; /* **C**ENTERS **S**TACKED **C**ARDS */
+    flex-direction: column; /* Stack cards vertically in a column on smaller screens */
+    align-items: center; /* Centers the stacked cards */
   }
 
   .pack-card {
-    **W**IDTH: 90%; /* **M**AKE **C**ARDS **T**AKE **U**P 90% **W**IDTH */
+    width: 90%; /* Make cards take up 90% width on smaller screens */
   }
 }
 
