@@ -85,39 +85,42 @@
 .white-panel {
   width: 100%;
   background: white;
-  padding: 60px 0;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
 }
 
 .pack-racks {
+  width: 100%;
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
+  align-items: center;
+  gap: 60px;
   box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .pack-rack {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   background-color: #d9d9d9;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1080px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
-
 
 .pack-card {
   background-color: #1c1c1c;
   border: 2px solid #FFD700;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  max-width: 400px;
-  width: 100%;
+  width: 420px;
+  max-width: 100%;
   text-align: left;
   transition: transform 0.3s ease;
 }
@@ -129,27 +132,27 @@
 }
 
 .pack-card p {
-  padding: 15px;
-  font-size: 1rem;
+  padding: 20px;
+  font-size: 1.1rem;
   color: #ccc;
   margin: 0;
 }
 
 .pack-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .pack-rack {
     flex-direction: column;
     align-items: center;
   }
 
   .pack-card {
-    max-width: 90%;
+    width: 90%;
   }
 }
+
 
     </style>
   </head>
