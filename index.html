@@ -252,6 +252,33 @@ main {
       font-size: 3rem; /* Adjust font size for smaller screens */
   }
 }
+body {
+    /* Your existing styles */
+
+    background-image: url('https://example.com/your-online-image.jpg'); /* REPLACE with the actual URL of your online image */
+
+    /* How it repeats: */
+    background-repeat: repeat; /* This will tile the image both horizontally and vertically */
+    /* OR, if you only want it to repeat *down* (vertically), and not across: */
+    /* background-repeat: repeat-y; */
+
+    /* How it scrolls: */
+    background-attachment: scroll; /* The background will scroll with the content */
+    /* (You can also just remove 'background-attachment: fixed;' if it was there,
+       as 'scroll' is the default behavior.) */
+
+    /* How it sizes (you might want to remove or change 'cover' if you're repeating): */
+    /* If you want the image to repeat, you usually DON'T want `background-size: cover;`
+       because `cover` tries to make one image fill the whole screen. */
+    background-size: auto; /* This is the default and lets the image show at its original size */
+    /* OR, if your image is very small and you want it larger but still repeating: */
+    /* background-size: 200px 200px; /* Example: set a specific size for each tile */
+
+    background-position: center top; /* Start repeating from the center top */
+
+    /* Optional: Fallback background color */
+    background-color: #000;
+}
     </style>
   </head>
   <body>
